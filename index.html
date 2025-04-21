@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click to Download</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body onclick="downloadFile()">
+  <h1>Click anywhere to download your file</h1>
+
+  <script>
+    function downloadFile() {
+      const link = document.createElement('a');
+      link.href = 'https://github.com/user-attachments/files/19837041/Data-Science-Prac-2to9.txt';
+      link.download = 'Data-Science-Prac-2to9.txt'; // Optional filename
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
